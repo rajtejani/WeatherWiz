@@ -1,17 +1,17 @@
-/**
- * @format
- */
-
-import 'react-native';
+import { render } from '@testing-library/react-native';
 import React from 'react';
+import { Provider } from 'react-redux';
 import App from '../App';
+import { store } from '../src/store/store';
 
-// Note: import explicitly to use the types shipped with jest.
-import {it} from '@jest/globals';
-
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('App', () => {
+  it('renders correctly', () => {
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    expect(getByTestId('app-container')).toBeTruthy();
+  });
 });
+
