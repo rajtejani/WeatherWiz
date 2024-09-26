@@ -10,6 +10,7 @@ interface IconButtonProps {
   variant?: 'filled' | 'outlined' | 'link';
   rounded?: 'partial' | 'full';
   size?: number;
+  testID?: string;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -20,6 +21,7 @@ const IconButton: React.FC<IconButtonProps> = ({
   rounded,
   size = 24,
   color = 'black',
+  testID
 }) => {
   const getButtonStyle = () => {
     switch (variant) {
@@ -70,6 +72,7 @@ const IconButton: React.FC<IconButtonProps> = ({
         style,
         { width: size, height: size },
       ]}
+      testID={testID}
     >
       <Icon name={iconName} size={size - (size * 0.5)} color={color} />
     </TouchableOpacity>
