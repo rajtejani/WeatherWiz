@@ -60,18 +60,19 @@ const WeatherDetailsScreen: React.FC = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: city,
-      headerRight: () => (
-        <View style={{paddingRight: 5}}>
-          <IconButton
-            iconName={isFavorite ? 'bookmark' : 'bookmark-border'}
-            onPress={toggleFavorite}
-            size={40}
-            color={colors.primary}
-          />
-        </View>
-      ),
+      headerRight: () =>
+        !error ? (
+          <View style={{paddingRight: 5}}>
+            <IconButton
+              iconName={isFavorite ? 'bookmark' : 'bookmark-border'}
+              onPress={toggleFavorite}
+              size={40}
+              color={colors.primary}
+            />
+          </View>
+        ) : null,
     });
-  }, [navigation, isFavorite, city]);
+  }, [navigation, isFavorite, city, error]);
 
   const fetchCityWeather = async () => {
     try {
