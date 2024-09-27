@@ -24,9 +24,9 @@ const ForecastSlider: React.FC<ForecastSliderProps> = ({ forecast }) => {
       <Text style={styles.title}>5-Day Forecast</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollContainer}>
         {forecast.map((day) => (
-          <View key={day.date} style={styles.dayContainer}>
+          <View key={day.date} style={styles.dayContainer} testID="forecast-day">
             <Text style={styles.date}>{moment(new Date(day.date)).calendar({ sameDay: '[Today]', nextDay: '[Tomorrow]', nextWeek: 'dddd'})}</Text>
-            <Image source={{ uri: `https:${day.day.condition.icon}` }} style={styles.icon} />
+            <Image source={{ uri: `https:${day.day.condition.icon}` }} style={styles.icon} testID="forecast-icon"  />
             <Text style={styles.temp}>{day.day.maxtemp_c}°C / {day.day.mintemp_c}°C</Text>
             <Text style={styles.condition}>{day.day.condition.text}</Text>
           </View>

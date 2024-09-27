@@ -16,9 +16,9 @@ interface ForecastListProps {
 
 const ForecastList: React.FC<ForecastListProps> = ({ forecast }) => {
   const renderItem = ({ item }: { item: ForecastItem }) => (
-    <View style={styles.item}>
+    <View style={styles.item} testID="forecast-item">
       <Text style={styles.date}>{item.date}</Text>
-      <Image source={{ uri: `https:${item.icon}` }} style={styles.icon} />
+      <Image source={{ uri: `https:${item.icon}` }} style={styles.icon} testID="forecast-icon"  />
       <Text style={styles.temp}>{item.tempHigh}°C / {item.tempLow}°C</Text>
       <Text style={styles.description}>{item.description}</Text>
     </View>

@@ -25,7 +25,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ location, current }) => {
     <View style={styles.card}>
       <Text style={styles.location}>{location.name}, {location.region}, {location.country}</Text>
       <Text style={styles.temperature}>{current.temp_c}°C</Text>
-      <Image source={{ uri: `https:${current.condition.icon}` }} style={styles.icon} />
+      <Image source={{ uri: `https:${current.condition.icon}` }} style={styles.icon} testID="weather-icon"  />
       <Text style={styles.description}>{current.condition.text}</Text>
       <Text style={styles.detail}>Feels like: {current.feelslike_c}°C</Text>
       <Text style={styles.detail}>Humidity: {current.humidity}%</Text>
