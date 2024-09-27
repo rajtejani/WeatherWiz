@@ -27,13 +27,7 @@ A mobile application built with React Native and TypeScript that provides users 
    nvm install 18.17.0
    nvm use 18.17.0
    ```
-
-2. Install React Native CLI:
-   ```
-   npm install -g react-native-cli
-   ```
-
-3. Set up Xcode and Android Studio following the [React Native Environment Setup guide](https://reactnative.dev/docs/environment-setup).
+2. Set up Xcode and Android Studio following the [React Native Environment Setup guide](https://reactnative.dev/docs/environment-setup).
 
 ## Project Setup
 
@@ -119,3 +113,8 @@ npm run test:coverage
 ## API Integration
 
 This app uses [OpenWeatherMap API](https://openweathermap.org/api) for weather data. You need to sign up for a free API key and add it to your environment variables or directly in the code (not recommended for production).
+
+## App Demo
+
+https://github.com/user-attachments/assets/5afc9961-4f70-42a5-8af1-78e11986e003
+
