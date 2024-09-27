@@ -112,7 +112,7 @@ npm run test:coverage
 
 ## API Integration
 
-This app uses [OpenWeatherMap API](https://openweathermap.org/api) for weather data. You need to sign up for a free API key and add it to your environment variables or directly in the code (not recommended for production).
+This app uses [WeatherAPI](https://www.weatherapi.com/) for weather data. You need to sign up for a free API key and add it to your environment variables or directly in the code (not recommended for production).
 
 ## App Demo
 
